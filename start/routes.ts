@@ -24,3 +24,7 @@ Route.group(() => {
   Route.post('/signup', 'AuthController.store')
   Route.post('/signin', 'AuthController.signin')
 }).prefix('v1/admin/auth')
+
+Route.group(() => {
+  Route.post('/store', 'PatternsController.store').middleware('auth')
+}).prefix('v1/client/patterns')
