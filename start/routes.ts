@@ -27,4 +27,5 @@ Route.group(() => {
 
 Route.group(() => {
   Route.post('/store', 'PatternsController.store').middleware('auth')
+  Route.post('/group/store', 'PatternsGroupsController.store').middleware('auth')
 }).prefix('v1/client/patterns')

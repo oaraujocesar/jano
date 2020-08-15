@@ -1,7 +1,7 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
 export default class CovidPatterns extends BaseSchema {
-  protected tableName = 'covid_patterns'
+  protected tableName = 'covid_patterns_individual'
 
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
