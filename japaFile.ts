@@ -7,11 +7,11 @@ import sourceMapSupport from 'source-map-support'
 
 process.env.NODE_ENV = 'testing'
 process.env.ADONIS_ACE_CWD = join(__dirname, '..')
-process.env.DB_CONNECTION = 'sqlite'
+process.env.DB_CONNECTION = 'pg'
 process.env.DB_HOST = '0.0.0.0'
-process.env.DB_USER = 'adonis'
-process.env.DB_PASSWORD = 'adonis'
-process.env.DB_NAME = 'test'
+process.env.DB_USER = 'docker'
+process.env.DB_PASSWORD = '123456'
+process.env.DB_NAME = 'jano_test'
 sourceMapSupport.install({ handleUncaughtExceptions: false })
 
 async function runMigrations () {

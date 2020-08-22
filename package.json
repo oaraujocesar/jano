@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "build": "node ace build",
-    "start": "node ace serve --watch",
+    "start": "node build/server.js",
+    "dev": "node ace serve --watch",
     "test": "node build/japaFile.js",
-    "lint": "eslint . --ext=.ts"
+    "lint": "eslint . --ext=.ts",
+    "migrate": "node ace migration:run"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^2.1.3",
